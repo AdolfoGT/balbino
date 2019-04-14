@@ -57,9 +57,14 @@
 		        		$('.message').html('The clock has stopped!')
 		        	}
 		        }
-		    });
-				    
-		    clock.setTime(2332800);
+        });
+        
+        let today = new Date();
+        let deadline = new Date("05/11/2019");
+        let diference = deadline.getTime() - today.getTime();
+
+    			    
+		    clock.setTime(diference / 1000);
 		    clock.setCountdown(true);
 		    clock.start();
 
