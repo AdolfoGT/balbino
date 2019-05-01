@@ -1,22 +1,129 @@
 /*! HTML5 Boilerplate v7.1.0 | MIT License | https://html5boilerplate.com/ */
 
+
 /* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
 
- 
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
-   html {
+@font-face {
+    font-family: Museosans;
+    src: url("museosans_700.otf") format("opentype");
+}
+
+html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    font-family: Museosans;
+    overflow-x: hidden;
 }
+
+section {
+    padding: 1em;
+    font-family: Museosans;
+}
+
+h2,
+h3,
+h4 {
+    font-family: Museosans;
+}
+
+.balbino_intro {
+    /*background: #CA005D;*/
+    padding: 2em;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    position: relative;
+}
+
+.propuestas {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 5em;
+}
+
+.balbino_transparente {
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    width: 46%;
+}
+
+.rotate-balbino {
+    position: absolute;
+    right: 22px;
+    top: 12px;
+    color: #CA005D;
+}
+
+nav {
+    font-family: 'Roboto Slab', serif;
+    border-bottom: 4px solid #CA005D;
+    background: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #6AADE4;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(0, 0, 0, .9);
+    width: 72px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #CA005D;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+.equipo_header {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+img.miembros {
+    border-radius: 50%;
+    filter: grayscale(100%);
+    max-width: 80%;
+    margin: 2em 0;
+}
+
+footer.fluid-container {
+    background: #000;
+    padding: 1em;
+    color: white;
+    margin: 0 auto;
+    font-family: Museosans;
+}
+
+footer a {
+    color: white;
+}
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -38,6 +145,7 @@
     text-shadow: none;
 }
 
+
 /*
  * A better looking default horizontal rule
  */
@@ -50,6 +158,7 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
+
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -66,6 +175,7 @@ video {
     vertical-align: middle;
 }
 
+
 /*
  * Remove default fieldset styles.
  */
@@ -76,6 +186,7 @@ fieldset {
     padding: 0;
 }
 
+
 /*
  * Allow only vertical resizing of textareas.
  */
@@ -83,6 +194,7 @@ fieldset {
 textarea {
     resize: vertical;
 }
+
 
 /* ==========================================================================
    Browser Upgrade Prompt
@@ -96,38 +208,35 @@ textarea {
 }
 
 
-
-
- /* ==========================================================================
+/* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
+#christian {
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto', sans-serif;
+    color: #6AADE4;
+    color: #CA005D;
+}
+
+.lista_candidatos {
+    background: #6AADE4;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- /* ==========================================================================
+/* ==========================================================================
    Helper classes
    ========================================================================== */
+
 
 /*
  * Hide visually and from screen readers
  */
 
- .hidden {
-  display: none !important;
+.hidden {
+    display: none !important;
 }
+
 
 /*
 * Hide only visually, but have it available for screen readers:
@@ -139,16 +248,18 @@ textarea {
 */
 
 .visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap; /* 1 */
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    /* 1 */
 }
+
 
 /*
 * Extends the .visuallyhidden class to allow the element
@@ -158,22 +269,24 @@ textarea {
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-  white-space: inherit;
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
 }
+
 
 /*
 * Hide visually and from screen readers, but maintain layout
 */
 
 .invisible {
-  visibility: hidden;
+    visibility: hidden;
 }
+
 
 /*
 * Clearfix: contain floats
@@ -189,73 +302,70 @@ textarea {
 
 .clearfix:before,
 .clearfix:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
-  clear: both;
+    clear: both;
 }
 
- 
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
 
-   @media only screen and (min-width: 35em) {
+@media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
- 
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-   @media print {
+@media print {
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster */
+        color: #000 !important;
+        /* Black prints faster */
         -webkit-box-shadow: none !important;
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
     a,
     a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
     }
-
     pre {
         white-space: pre-wrap !important;
     }
@@ -264,32 +374,25 @@ textarea {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
     thead {
         display: table-header-group;
     }
-
     tr,
     img {
         page-break-inside: avoid;
     }
-
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
-
     h2,
     h3 {
         page-break-after: avoid;
     }
 }
-
-
