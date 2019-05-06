@@ -1297,7 +1297,7 @@ img.miembros:hover {
     padding: 4em 0;
     margin-bottom: 7em;
     margin-top: 5em;
-    background-color: #57A773;
+    background-color: #6AADE4;
     position: relative;
 }
 
@@ -1314,7 +1314,8 @@ img.miembros:hover {
 }
 
 .appmobile .post-preview a:hover {
-    color: #7DCE82;
+    color: #6a8eae;
+    text-shadow: 1px 1px 7px white;
 }
 
 header.masthead .overlay {
@@ -1324,7 +1325,7 @@ header.masthead .overlay {
     height: 100%;
     width: 100%;
     background-color: #212529;
-    opacity: 0.3;
+    opacity: 0.05;
 }
 
 header.masthead .page-heading,
